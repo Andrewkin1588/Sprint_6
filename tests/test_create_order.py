@@ -1,10 +1,4 @@
-import time
-
 import allure
-import pytest
-
-from locators.create_order_locators import CreateOrderLocators
-from pages.base_page import BasePage
 from constants import *
 from pages.order_page import OrderPage
 

@@ -1,6 +1,5 @@
 import allure
 import pytest
-from pages.base_page import BasePage
 from constants import URL
 from locators.q_and_a_locators import *
 from pages.main_page import MainPage
@@ -29,10 +28,9 @@ class TestQuestionsAndAnswers:
     def test_question_and_answer(self, question, answer, extended, browser):
         with allure.step("Переходим на главную страницу"):
             browser.get(URL)
-        b_page = BasePage(browser)
         m_page = MainPage(browser)
         m_page.sleep_while_not_located_faq_div()
         with allure.step("Нажимаем на вопрос"):
-            b_page.js_click(question)
+            m_page.click_question(question)
         with allure.step("Сравниваем ответ на вопрос"):
-            assert b_page.get_text(answer) == extended
+            assert m_page.get_text_answer(answer) == extended

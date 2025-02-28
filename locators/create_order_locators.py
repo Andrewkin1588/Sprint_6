@@ -18,5 +18,5 @@ class CreateOrderLocators:
     TEXT_COMPLETED_ORDER = [By.CLASS_NAME, "Order_ModalHeader__3FDaJ"]
     LINK_SCOOTER_LOGO = [By.CLASS_NAME, "Header_LogoScooter__3lsAR"]
     LINK_YANDEX_LOGO = [By.CLASS_NAME, "Header_LogoYandex__3TSOI"]
-    CALENDAR_DATA = [By.XPATH, "//div[@class='react-datepicker__day react-datepicker__day--028']"]
+    CALENDAR_DATA = [By.XPATH, "//div[contains(@class,'react-datepicker__day react-datepicker__day--028')]"]
 
